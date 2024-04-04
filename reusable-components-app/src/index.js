@@ -1,14 +1,16 @@
-import React from "react";
+import React,{lazy, Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import ArrayUpdate from "./components/ArrayUpdate";
-import ObjectStateUpdate from "./components/ObjectStateUpdate";
 import Home from "./components/Home";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+const Axios = lazy(()=>import('./components/Axios'));
+const ArrayUpdate = lazy(()=>import('./components/ArrayUpdate'));
+const ObjectStateUpdate = lazy(()=>import('./components/ObjectStateUpdate'));
 
 function App() {
   return (
@@ -31,11 +33,28 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/arrayupdate",
-        element: <ArrayUpdate />,
+        element: (
+          <Suspense fallback={<h1> Loading Please Wait.....</h1>}>
+            <ArrayUpdate />
+          </Suspense>
+        )
       },
       {
         path: "/objectstateupdate",
-        element: <ObjectStateUpdate />,
+        element: (
+          <Suspense fallback={<h1> Loading Please Wait.....</h1>}>
+            <ObjectStateUpdate />
+          </Suspense>
+        )
+      },
+      {
+        
+        path: "/axios",
+        element: (
+          <Suspense fallback={<h1> Loading Please Wait.....</h1>}>
+            <Axios />
+          </Suspense>
+        )
       },
     ],
     errorElement: <Error />,

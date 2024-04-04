@@ -41,9 +41,9 @@ const Header = () => {
             <h1 style={headingStyle}>React Practice Application</h1>
             <nav>
                 <ul style={navStyle}>
-                    {/* <li><Link style={linkStyle} to="/home">Home</Link></li> */}
                     <li><Link style={linkStyle} to="/arrayupdate">ArrayUpdate</Link></li>
                     <li><Link style={linkStyle} to="/objectstateupdate">ObjectStateUpdate</Link></li>
+                    <li><Link style={linkStyle} to="/axios">Axios</Link></li>
                 </ul>
             </nav>
         </header>

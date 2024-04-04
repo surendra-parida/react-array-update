@@ -55,6 +55,12 @@ The `ObjectStateUpdate` component is a React component that allows users to upda
 - This is a simple React component to display error messages.
 
 ## Axios Component
+
 - The Axios component is a simple React component that demonstrates how to fetch data from an external API using Axios and display it on the screen. In this example, it fetches data from the JSONPlaceholder API and displays the IDs and titles of the posts.
 ## Lazy Loading with suspense
+
 - Lazy loading is a technique in web development where resources, such as components or modules, are loaded asynchronously, typically deferred until they are required. React.js provides the React.lazy() function, which allows components to be imported dynamically, and the Suspense component for handling loading states.
+
+## implemented useContext and createContext
+
+- By using createContext and useContext, you can simplify state management and make your React code more maintainable by reducing prop drilling. These tools are particularly useful for passing global data or application configuration throughout your component tree.

@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Error from "./components/Error";
+import NoteContext from "./NoteContext";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const Axios = lazy(()=>import('./components/Axios'));
@@ -14,11 +15,11 @@ const ObjectStateUpdate = lazy(()=>import('./components/ObjectStateUpdate'));
 
 function App() {
   return (
-    <div>
+    <NoteContext.Provider value={{name:"Surendra Parida", class:"3rd Semester"}}>
       <Header />
       <Outlet style={{paddingTop: "250px"}} />
       <Footer />
-    </div>
+    </NoteContext.Provider>
   );
 }
 

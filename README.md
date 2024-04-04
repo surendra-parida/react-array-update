@@ -8,6 +8,10 @@ Welcome to the Reusable React Components repository! This repository contains a 
 - Components are built using modern React practices, ensuring efficiency and reliability.
 - Easy-to-understand codebase with clear documentation for each component.
 
+## Styling
+
+All compnents includes some inline CSS to enhance its appearance.
+
 
 ## created Array Update components
 
@@ -27,11 +31,25 @@ This React component (`ArrayUpdate`) allows users to manage a list of foods dyna
 
 3. To remove a food item from the list, simply click on the item.
 
-## Styling
 
-The component includes some inline CSS to enhance its appearance. Feel free to modify the CSS properties to customize the styling according to your preferences.
+## ObjectStateUpdate components
 
-## Dependencies
+The `ObjectStateUpdate` component is a React component that allows users to update information about their favorite car. Users can input the manufacturing year, company name, and model name of their favorite car, and the component will display this information.
 
-- React
-- React-DOM
+## Features
+
+- Allows users to input the manufacturing year, company name, and model name of their favorite car.
+- Displays the updated information about the favorite car in real-time.
+- User-friendly interface with input fields and clear instructions.
+
+## How to Use
+
+1. Input the manufacturing year, company name, and model name of your favorite car in the provided input fields.
+
+2. The component will display the updated information about your favorite car in real-time.
+
+## Routing Added
+- Routing has been implemented using react-router-dom. Click on the navigation buttons to navigate to all reusable components.
+
+## Error Component
+- This is a simple React component to display error messages.
